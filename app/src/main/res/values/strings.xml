@@ -1,0 +1,28 @@
+<resources>
+
+        <string name="app_name">WorkoutApp</string>
+        <string-array name="workouts">
+                <item>Push Up</item>
+                <item>Bench Press</item>
+                <item>Pull Ups</item>
+                <item>Overhead Press</item>
+                <item>workout6</item>
+                <item>workout7</item>
+                <item>workout8</item>
+                <item>workout9</item>
+        </string-array>
+
+        <string-array name = "workout_description">
+                <item>Lay in a hand plank position with your hands and feet shoulder width apart. Push up until your arms are fully extended then lower yourself back into a plank position.</item>
+                <item>Lay on your back on a flat a bench and hold a weighted bar above you chest level grip the bar with your hands at shoulder width, lower the bar till ti touches your chest and push back up</item>
+                <item>Grab the bar with palms facing away from you, another person can assist you by holding your ankles while you perform the exercise.</item>
+                <item>Stand with legs about shoulder width. Hold the bar or weighted bar along your upper chest/shoulder area. explosively push the weight into the air and extend your arms, as you push the bar jump and bring your legs into a staggered position. bring it back down to your chest and repeat.</item>
+                <item>description5</item>
+                <item>description6</item>
+                <item>description7</item>
+                <item>description8</item>
+                <item>description9</item>
+
+        </string-array>
+
+</resources>
