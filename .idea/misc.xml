@@ -3,12 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.21401824951171877" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.18352941176470589" />
         <entry key="app/src/main/res/layout/activity_new_workout.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_view_pager_adapter.xml" value="0.18614130434782608" />
-        <entry key="app/src/main/res/layout/fragment_learn.xml" value="0.15844421386718754" />
+        <entry key="app/src/main/res/layout/fragment_add.xml" value="0.28246612548828126" />
+        <entry key="app/src/main/res/layout/fragment_learn.xml" value="0.16878356933593755" />
         <entry key="app/src/main/res/layout/fragment_plan.xml" value="0.1976364135742188" />
-        <entry key="app/src/main/res/layout/my_row.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/full_workout_template.xml" value="0.24592263864916425" />
+        <entry key="app/src/main/res/layout/individual_workout.xml" value="0.25378112792968754" />
+        <entry key="app/src/main/res/layout/my_row.xml" value="0.19758148193359373" />
+        <entry key="app/src/main/res/layout/new_workout.xml" value="0.11215209960937501" />
+        <entry key="app/src/main/res/layout/new_workout_row.xml" value="0.30143553821753116" />
       </map>
     </option>
   </component>

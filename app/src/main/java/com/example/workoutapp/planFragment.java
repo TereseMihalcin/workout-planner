@@ -11,34 +11,31 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 
 public class planFragment extends Fragment {
 
-    String[] s1;
-    String[] s2;
-
+    String title;
 
     public planFragment () {
 
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_plan, container, false);
+        View view =  inflater.inflate(R.layout.fragment_plan, container, false);
 
-        s1 = getResources().getStringArray(R.array.workouts);
-        s2 = getResources().getStringArray(R.array.workout_description);
+        //string from resource file
+        title = getResources().getString(R.string.workout_title);
 
-
-        RecyclerView recyclerView = view.findViewById(R.id.recycler);
-        recyclerView.setHasFixedSize(true);
+        RecyclerView recyclerView = view.findViewById(R.id.planRecycler1);
+        recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        recyclerView.setAdapter(new RecyclerViewAdapter(s1, s2));
+        recyclerView.setAdapter(new RecyclerAdapterPlan1(title));
 
         return view;
     }

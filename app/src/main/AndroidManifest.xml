@@ -10,10 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WorkoutApp">
         <activity
-            android:name=".newWorkout"
-            android:exported="false"
-            android:parentActivityName=".MainActivity"/>
-        <activity
             android:name=".ViewPagerAdapter"
             android:exported="false" />
         <activity
@@ -25,6 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ConfirmWorkout" />
     </application>
 
 </manifest>

@@ -3,7 +3,6 @@ package com.example.workoutapp;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,9 +12,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
     String[] data1;
     String[] data2;
 
+    //nested recyclerView or something
+
     public RecyclerViewAdapter(String[] s1, String[] s2) {
         this.data1 = s1;
         this.data2 = s2;
+
     }
 
     @Override
