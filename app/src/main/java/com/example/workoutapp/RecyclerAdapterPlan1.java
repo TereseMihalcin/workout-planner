@@ -7,14 +7,16 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 
 public class RecyclerAdapterPlan1 extends RecyclerView.Adapter<RecyclerViewHolderPlan1> {
     String title;
 
     //nested recyclerView or something
 
-    public RecyclerAdapterPlan1(String title) {
-        this.title = title;
+    public RecyclerAdapterPlan1(String workoutTitle) {
+        this.title = workoutTitle;
 
     }
 

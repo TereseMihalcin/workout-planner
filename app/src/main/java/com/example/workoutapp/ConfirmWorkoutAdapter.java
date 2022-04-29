@@ -16,7 +16,7 @@ public class ConfirmWorkoutAdapter extends RecyclerView.Adapter<ConfirmWorkoutHo
     Context context;
     ConfirmWorkout.Exercise[] names;
     boolean check;
-    ArrayList<ConfirmWorkout.Exercise> checkedExercises=new ArrayList<>();
+    ArrayList<ConfirmWorkout.Exercise> checkedExercises = new ArrayList<>();
 
     //nested recyclerView or something
 

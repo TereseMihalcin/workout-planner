@@ -1,14 +1,11 @@
 package com.example.workoutapp;
 
-import android.app.Activity;
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.Toast;
+import android.view.MenuItem;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -16,15 +13,36 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.ArrayList;
+
 public class ConfirmWorkout extends AppCompatActivity {
     RecyclerView recyclerViewAdd;
-
-    String checkName;
     boolean checkBox;
+
+
+
+    public class ExerciseName {
+
+        public String editText;
+
+        public ExerciseName(String editText) {
+            this.editText = editText;
+        }
+
+
+    }
+
+
+
+
 
     public class Exercise {
         // private boolean checkBox;
-        private String checkName;
+        public String checkName;
+
+
+
+
 
         public Exercise(String checkName) {
             this.checkName = checkName;
@@ -46,10 +64,20 @@ public class ConfirmWorkout extends AppCompatActivity {
         public void setSelected(boolean selected) {
             checkBox = selected;
         }
+
+    }
+
+    // the back button in the menu
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        if (menuItem.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(menuItem);
     }
 
 
-    private Exercise[] getWorkouts() {
+    public Exercise[] getWorkouts() {
         final Exercise[] exercises = { new Exercise("push-up"),
                 new Exercise("pull-up"),
                 new Exercise("Bench Press"),
@@ -74,10 +102,7 @@ public class ConfirmWorkout extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_workout);
 
-        // back button set this up a different way (low priority)
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        // get the values for the array
+        // get id for the edit text field
 
 
         //checkName = getResources().getStringArray(R.array.workouts);
@@ -90,8 +115,9 @@ public class ConfirmWorkout extends AppCompatActivity {
         recyclerViewAdd.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewAdd.setAdapter(adapter);
 
-        //addListenerOnButtonClick();
+        // addListenerOnButtonClick();
 
+        ArrayList<Exercise> checkedList = adapter.checkedExercises;
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(view -> {
             sb = new StringBuilder();
@@ -100,7 +126,7 @@ public class ConfirmWorkout extends AppCompatActivity {
                 Exercise exercise=adapter.checkedExercises.get(i);
                 sb.append(exercise.getName());
                 if(i != adapter.checkedExercises.size()-1){
-                    sb.append("n");
+                    sb.append(" ");
                 }
                 i++;
 
@@ -108,35 +134,25 @@ public class ConfirmWorkout extends AppCompatActivity {
 
             if(adapter.checkedExercises.size()>0)
             {
+                //this is where i need to send the array data to the other screen
                 Toast.makeText(ConfirmWorkout.this,sb.toString(),Toast.LENGTH_SHORT).show();
             }else {
                 Toast.makeText(ConfirmWorkout.this, "Please Check An Item First or hit the back button", Toast.LENGTH_SHORT).show();
             }
 
+            // changes the value in edit text into a string value
+            EditText editText = (EditText) findViewById(R.id.et_simple);
+            String strValue = editText.getText().toString();
+
+            // attempt to send data to planFragment
+            Bundle bundle = new Bundle();
+            bundle.putString("message", strValue );
+            planFragment fragInfo = new planFragment();
+            fragInfo.setArguments(bundle);
+
         });
+
     }
+
 }
-
-
-
-    /*
-    private void addListenerOnButtonClick() {
-        yesCheck = (CheckBox) findViewById(R.id.checkBox2);
-
-        yesCheck.setOnClickListener((View.OnClickListener) view -> {
-            StringBuilder result=new StringBuilder();
-            result.append("Selected Items:");
-            if(yesCheck.isChecked()){
-                result.append(" something was checked");
-
-            }
-
-            result.append("\nTotal");
-            //Displaying the message on the toast
-            Toast.makeText(getApplicationContext(), result.toString(), Toast.LENGTH_LONG).show();
-            // add the checkbox string value to an array
-            //then you can populate the array in another view
-        });
-    }
-*/
 

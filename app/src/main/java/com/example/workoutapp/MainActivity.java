@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
 
         // mediator for tablayout and viewpager2
         new TabLayoutMediator(tablayout, viewpager2, (tabs, position) -> {
-            // seems like the tab names must be set in here
-            tabs.setText("tab" + position);
 
-            // i need a different way to do this
+            // set the text for both tabs, get them from the string resources
+            tabs.setText(getResources().getStringArray(R.array.tab_text)[position]);
+
 
         }).attach();
 
