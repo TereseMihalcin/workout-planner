@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-
+// holder for the learn fragment
 public class RecyclerViewHolder extends RecyclerView.ViewHolder {
 
     TextView view, view2;

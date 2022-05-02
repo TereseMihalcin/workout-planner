@@ -17,11 +17,11 @@ public class ConfirmWorkoutHolder extends RecyclerView.ViewHolder implements Vie
         super(itemView);
         checkName = itemView.findViewById(R.id.textView4);
         checkBox = itemView.findViewById(R.id.checkBox2);
-
         checkBox.setOnClickListener(this);
     }
 
-        public void setItemClickListener(ItemClickListener ic){
+    // item click listener
+    public void setItemClickListener(ItemClickListener ic){
             this.itemClickListener = ic;
         }
 

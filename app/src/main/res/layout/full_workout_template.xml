@@ -7,8 +7,8 @@
     android:background="#673AB7">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="326dp"
-        android:layout_height="213dp"
+        android:layout_width="327dp"
+        android:layout_height="222dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="36dp"
@@ -21,20 +21,27 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <TextView
-            android:id="@+id/WorkoutTitle"
+        <EditText
+            android:id="@+id/et_simple"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="57dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
-            android:text="@string/workout_title"
-            android:textColor="@color/white" />
+            android:layout_marginTop="10dp"
+            android:hint="@string/add_new_workout"
+            android:inputType="textShortMessage"
+            android:text="Give your workout a Title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </EditText>
+
 
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
+            android:id="@+id/nestedRecycler"
+            android:layout_width="299dp"
             android:layout_height="143dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="56dp" />
+            android:layout_marginTop="69dp" />
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

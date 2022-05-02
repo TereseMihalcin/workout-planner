@@ -16,23 +16,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/Sets"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Sets"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exerciseTitle" />
-
-    <TextView
-        android:id="@+id/Reps"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Reps"
-        app:layout_constraintStart_toEndOf="@+id/Sets"
-        app:layout_constraintTop_toBottomOf="@+id/exerciseTitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>

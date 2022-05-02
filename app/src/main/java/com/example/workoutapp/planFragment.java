@@ -14,36 +14,41 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 
 public class planFragment extends Fragment {
 
-    String title;
+    String placeHolder;
+    // ArrayList<ConfirmWorkout.Exercise> checkedExercises;
+    String[] checkedExercises;
 
     public planFragment () {
 
     }
-
+   
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
 
-        // String data = getArguments().getString("message");
+       // String data = getArguments().getString("message");
         View view =  inflater.inflate(R.layout.fragment_plan, container, false);
 
+       //checkedExercises = ArrayList<ConfirmWorkout.checkedExercises>;
+        //ArrayList<ConfirmWorkout.Exercise> checkedExercises;
+        checkedExercises = getResources().getStringArray(R.array.workouts);
 
 
 
-
-
-        //string from resource file
-        title = getResources().getString(R.string.workout_title);
+        // place holder text for the text view
+        placeHolder = "Give this workout a name";
 
         RecyclerView recyclerView = view.findViewById(R.id.planRecycler1);
         recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        recyclerView.setAdapter(new RecyclerAdapterPlan1(title));
+        recyclerView.setAdapter(new RecyclerAdapterPlan1(getActivity(),checkedExercises, placeHolder));
 
         return view;
     }
