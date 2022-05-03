@@ -1,5 +1,5 @@
 # My Workout Planner/Educational Workout Mobile App
-## Please refer to the master brach of this repository for the most updated project content
+## ***Please refer to the master brach of this repository for the most updated project content***
 ![Project Notes Image 1](/app/src/main/res/drawable-v24/pushup2.gif)
 ###### Push up Gif created entirely by Mya Junkin (thank you Mya!)
 ## My Senior final project is an Android Mobile app using Java. It is an workout planner/educational workout app. 
